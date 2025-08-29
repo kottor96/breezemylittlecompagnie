@@ -11,12 +11,14 @@ class DepartementSeeder extends Seeder
    
     public function run(): void
     {
-        Departement::insert([
+        $departements = [
             ['name' => 'IT'],
             ['name' => 'HR'],
             ['name' => 'Finance'],
             ['name' => 'Sales'],
-            
-        ]);
+        ];
+        foreach ($departements as $departement) {
+            Departement::create($departement);
+        }
     }
 }

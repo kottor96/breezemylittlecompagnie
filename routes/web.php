@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\EmployeController;
 use App\Http\Controllers\homeController;
 use App\Http\Controllers\ProduitController;
@@ -14,6 +15,7 @@ Route::get('/produits', [ProduitController::class,'index'])->name('produit');
 
 Route::get('/team', [EmployeController::class,'index'])->name('team');
 
+Route::get('/contact',[ContactController::class,'index'])->name('contact');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

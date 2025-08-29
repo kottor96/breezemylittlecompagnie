@@ -9,6 +9,8 @@
 </head>
 <body>
     @include('components.header')
-    @yield('content')
+    <main class="flex justify-content-center m-10">
+        @yield('content')
+    </main>
 </body>
 </html>

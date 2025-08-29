@@ -2,9 +2,10 @@
     @if (Route::has('login'))
         <nav class="flex items-center justify-end gap-4 bg-green-500 w-full p-3">
             <div>
-                <a href="{{route('home')}}" class="px-5 py-1.5">home</a>
-                <a href="{{route('produit')}}" class="px-5 py-1.5">liste produit</a>
-                <a href="{{route('team')}}" class='px-5 py-1.5'>team</a>
+                <a href="{{route('home')}}" class="px-5 py-1.5 dark:text-[#EDEDEC]">home</a>
+                <a href="{{route('produit')}}" class="px-5 py-1.5 dark:text-[#EDEDEC]">liste produit</a>
+                <a href="{{route('team')}}" class='px-5 py-1.5 dark:text-[#EDEDEC]'>team</a>
+                <a href="{{route('contact')}}" class='px-5 py-1.5 dark:text-[#EDEDEC]'>contact</a>
             </div>
             <div class="">
                 @auth
