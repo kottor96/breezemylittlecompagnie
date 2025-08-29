@@ -15,19 +15,11 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        $this->call(RoleSeeder::class);
-
-        User::factory(3)->has(Avatar::factory())->create();
-
-        User::factory()->has(Avatar::factory())->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
-            'pseudo' => 'TestPseudo'
-        ]);
+    
 
         $this->call([
-               DepartementSeeder::class, EmployeSeeder::class, 
-            ]);
+            RoleSeeder::class,DepartementSeeder::class, EmployeSeeder::class, ProduitSeeder::class,
+        ]);
         
     }
 }

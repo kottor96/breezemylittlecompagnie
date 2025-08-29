@@ -18,7 +18,6 @@ class AvatarFactory extends Factory
     {
         return [
             'image' => 'https://sm.ign.com/ign_fr/cover/a/avatar-gen/avatar-generations_bssq.jpg',
-            'user_id' => null
         ];
     }
 }

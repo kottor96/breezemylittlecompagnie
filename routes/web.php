@@ -1,11 +1,19 @@
 <?php
 
+use App\Http\Controllers\EmployeController;
+use App\Http\Controllers\homeController;
+use App\Http\Controllers\ProduitController;
 use App\Http\Controllers\ProfileController;
+use App\Models\Employe;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [homeController::class,'index'])->name('home');
+
+
+Route::get('/produits', [ProduitController::class,'index'])->name('produit');
+
+Route::get('/team', [EmployeController::class,'index'])->name('team');
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
